@@ -3,11 +3,16 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
+        "preinstall": "npx npm-force-resolutions",
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
         "analyze": "cross-env ANALYZE=true next build"
+    },
+    "resolutions": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
     },
     "dependencies": {
         "@dnd-kit/core": "^6.1.0",
