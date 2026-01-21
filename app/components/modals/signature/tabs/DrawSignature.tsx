@@ -47,12 +47,7 @@ const DrawSignature = ({ handleSaveSignature }: DrawSignatureProps) => {
                     >
                         {/* Signature Canvas to draw signature */}
                         <SignatureCanvas
-                            velocityFilterWeight={1} // Adjust the velocityFilterWeight to make the pen lighter
-                            minWidth={1.4} // Adjust the minWidth for a finer line
-                            maxWidth={1.4} // Adjust the maxWidth for a finer line
-                            throttle={0}
                             ref={signatureRef}
-                            penColor={selectedColor}
                             canvasProps={{
                                 style: {
                                     background: "#efefef",
@@ -61,7 +56,6 @@ const DrawSignature = ({ handleSaveSignature }: DrawSignatureProps) => {
                                     height: "15rem",
                                 },
                             }}
-                            onEnd={handleCanvasEnd}
                         />
                     </div>
                 </CardContent>

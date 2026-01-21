@@ -3,11 +3,20 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "functions": {
-    "app/api/**/*.ts": {
-      "maxDuration": 30
+    "app/api/invoice/generate/route.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "app/api/invoice/send/route.ts": {
+      "maxDuration": 60,
+      "memory": 512
+    },
+    "app/api/invoice/export/route.ts": {
+      "maxDuration": 30,
+      "memory": 512
     }
   },
-  "regions": ["fra1"],
+  "regions": ["iad1"],
   "headers": [
     {
       "source": "/api/(.*)",
